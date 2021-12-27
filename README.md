@@ -7,9 +7,9 @@ Full microservices rig to see integration and backend access
 3. Create 3 databases called minimit_authentication, minimint_posts and minimint_profiles. These correspond to the databases each team is using but provides a consistent naming protocol.
 4. In the 3 services (authorization-server-main, posts-server-main and profile-service-main) open the respective application.properties files and modify the mysql username and password accordingly. While there, take a moment to inspect the application.yml file to see the designated port numbers and names for the various services.
 5. Although not yet populated, the minimint_profiles database requires a single entry in a privacy table in order to work. So log into MySql and ...
-  a. USE minimint_profiles;
-  b. CREATE TABLE privacy;
-  c. INSERT INTO privacy (privacyid, bio, dob, email, gender, name) VALUES (1, false, false, true, true, true);
+  * USE minimint_profiles;
+  * CREATE TABLE privacy;
+  * INSERT INTO privacy (privacyid, bio, dob, email, gender, name) VALUES (1, false, false, true, true, true);
 6. Fire up the servers in the following order:
   a. SERVICE-REGISTRY --> once done enter localhost:8761 on your browser (BTW Eureka insists that this is its port number - will not be changed).
   b. CONFIG-SERVER --> this will pull the config-server file from the corresponding Revature-MiniMint config-server file repo.
