@@ -11,10 +11,10 @@ Full microservices rig to see integration and backend access
   * CREATE TABLE privacy;
   * INSERT INTO privacy (privacyid, bio, dob, email, gender, name) VALUES (1, false, false, true, true, true);
 6. Fire up the servers in the following order:
-  1. SERVICE-REGISTRY --> once done enter localhost:8761 on your browser (BTW Eureka insists that this is its port number - will not be changed).
-  2. CONFIG-SERVER --> this will pull the config-server file from the corresponding Revature-MiniMint config-server file repo.
-  3. AUTHORIZATION-SERVICE, POSTS-SERVICE and PROFILES-SERVICE --> in no particular order.
-  4. API-GATEWAY
+  * SERVICE-REGISTRY --> once done enter localhost:8761 on your browser (BTW Eureka insists that this is its port number - will not be changed).
+  * CONFIG-SERVER --> this will pull the config-server file from the corresponding Revature-MiniMint config-server file repo.
+  * AUTHORIZATION-SERVICE, POSTS-SERVICE and PROFILES-SERVICE --> in no particular order.
+  * API-GATEWAY
 7. Remember to refresh the browser to see each service as it's added.
 8. To test, open Postman and the corresponding README.md files for each deveopment group's repo - this will walk you through the various access paths to test the services.
 9. NOTE the API-GATEWAY is on port 20030, so all calls to all services should begin localhost:20030/<service predicate path>. Avoid the temptation to refer to a backend service via it's own port - this works, but misses the point. All front end calls will go via port 20030.
