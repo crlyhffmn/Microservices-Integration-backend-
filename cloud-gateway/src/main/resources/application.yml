@@ -1,0 +1,23 @@
+server:
+  port: 20030
+
+spring:
+  application:
+    name: API-GATEWAY
+  config:
+    import: optional:configserver:http://localhost:20020
+  cloud:
+    gateway:
+      routes:
+        - id: AUTHORIZATION-SERVICE
+          uri: lb://AUTHORIZATION-SERVICE
+          predicates:
+            - Path=/user/**
+        - id: PROFILES-SERVICE
+          uri: lb://PROFILES-SERVICE
+          predicates:
+            - Path=/profiles/**
+        - id: POSTS-SERVICE
+          uri: lb://POSTS-SERVICE
+          predicates:
+            - Path=/comments/**, /postfeed/**, /posts/**, /reactions/**

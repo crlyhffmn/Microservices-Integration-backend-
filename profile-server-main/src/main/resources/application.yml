@@ -1,0 +1,8 @@
+server:
+  port: 10011
+
+spring:
+  application:
+    name: PROFILES-SERVICE
+  config:
+    import: optional:configserver:http://localhost:20020

@@ -1,0 +1,8 @@
+server:
+  port: 10021
+
+spring:
+  application:
+    name: POSTS-SERVICE
+  config:
+    import: optional:configserver:http://localhost:20020
