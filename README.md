@@ -1,6 +1,9 @@
 # Microservices-Integration-backend-
 Full microservices rig to see integration and backend access
 
+#N.B
+Please see System Integration document to update team POM.xml and application.yml files.
+
 # To Run
 1. Download or clone the repository to a folder of your choice. I find that I get errors if the various folders are not in my IdeaProjects folder for IntelliJ but different systems undoubtedly vary.
 2. Open each folder as a separate project in IntelliJ or Eclipse - use a different window for each.
