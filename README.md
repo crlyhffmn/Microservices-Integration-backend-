@@ -7,7 +7,7 @@ Please see System Integration document to update team POM.xml and application.ym
 # To Run
 1. Download or clone the repository to a folder of your choice. I find that I get errors if the various folders are not in my IdeaProjects folder for IntelliJ but different systems undoubtedly vary.
 2. Open each folder as a separate project in IntelliJ or Eclipse - use a different window for each.
-3. Create 3 databases called minimit_authentication, minimint_posts and minimint_profiles. These correspond to the databases each team is using but provides a consistent naming protocol.
+3. Create 3 databases called minimint_authentication, minimint_posts and minimint_profiles. These correspond to the databases each team is using but provides a consistent naming protocol.
 4. In the 3 services (authorization-server-main, posts-server-main and profile-service-main) open the respective application.properties files and modify the mysql username and password accordingly. While there, take a moment to inspect the application.yml file to see the designated port numbers and names for the various services.
 5. Although not yet populated, the minimint_profiles database requires a single entry in a privacy table in order to work. So log into MySql and ...
   * USE minimint_profiles;
